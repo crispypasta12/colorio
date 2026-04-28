@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Color.io | App">
+  <meta name="mobile-web-app-title" content="Color.io | App">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1e1e21"/>
+
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_16_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_16_Pro_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/pwa/splashes/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_16_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_16_Pro_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/pwa/splashes/8.3__iPad_Mini_portrait.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.png">
+
+  <link rel="prefetch" href="js/package.min.js">
+
+  <title>Color.io App – RAW Photo Editor & AI Color Grading</title>
+  <meta name="description" content="AI‑powered online RAW photo editor & color grading app for photographers and filmmakers. Create film‑emulation 3D LUTs with advanced analog curves, halation & batch exports.">
+  <meta name="keywords" content="ai color grading, ai color matching, raw photo editor, online raw editor, web app, 3d lut creator, lut generator, film emulation luts, color grading app, color correction software, photo editor, raw editing, color.io">
+
+  <meta property="og:title" content="Color.io App">
+  <meta property="og:site_name" content="Color.io App">
+  <meta property="og:description" content="AI‑powered online RAW photo editor & color grading app for photographers and filmmakers. Create film‑emulation 3D LUTs with advanced analog curves, halation & batch exports.">
+  <meta property="og:image" content="assets/opengraph_colorio.jpg">
+  <meta property="og:image:width" content="1250">
+  <meta property="og:image:height" content="780">
+  <meta name="twitter:card" content="app">
+
+  <style>
+    html {
+      position: relative;
+      width: 100%;
+      height: 100svh;
+      overscroll-behavior: none;
+      top: 0;
+      padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0) 0;
+      margin: 0;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont,
+        'Segoe UI', system-ui, 'Source Sans Pro', Oxygen-Sans, Ubuntu, Cantarell,
+        'Helvetica Neue', sans-serif;
+      color: rgb(226, 226, 233); /* --theme-text-100 */
+      background-color: rgb(29, 29, 35); /* --theme-surface-050 :: match top-bar and bottom-bar bg */
+      background-image: url(assets/cio_logo.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: min(90%, 100px);
+      user-select: none;
+      touch-action: none;
+      overscroll-behavior-x: none;
+      scrollbar-width: none!important;
+      -webkit-touch-callout: none!important;
+      -webkit-user-select: none!important;
+      -webkit-user-drag: none!important;
+    }
+    body {
+      position: relative;
+      margin: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overscroll-behavior: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/package.min.css">
+
+</head>
+
+<body>
+  <noscript>Javascript is required to use this application</noscript>
+  <color-io>
+    <top-bar class="flex-row pd-x-050 pd-y-025 y-center gap-050"></top-bar>
+    <main class="pos-rel flex-row center">
+      <viewport-overlay class="pos-abs w-full flex-row x-between gap-050 pd-050" style="bottom:0"></viewport-overlay>
+      <start-screen class="pos-rel flex-col x-center w-475 max-w-5/6 max-h-5/6 overflow-hidden">
+        <header class="w-full flex-row y-center x-between gap-050 pd-y-150 pd-x-175">
+          <img src="assets/cio_logo.svg" class="h-100" loading="lazy">
+          <span class="text-xs opacity-05">Version 3.3.3</span>
+        </header>
+        <section class="pos-rel flex-col center">
+          <img class="w-full opacity-05" src="assets/img/cio_gallery.avif" loading="lazy">
+          <div class="pos-abs w-full flex-row center gap-025 wrap pd-x-050 pd-t-100">
+            <button data-action="open-projects" class="action-button text-s text-semibold cursor-pointer">Create Project</button>
+            <button data-action="import-files" class="action-button primary rounded-full text-s text-semibold cursor-pointer">
+              Open Image(s)
+            </button>
+          </div>
+        </section>
+        <footer class="flex-row center gap-025 wrap pd-y-150 pd-x-050">
+          <img class="w-150 mg-l-100 square opacity-05" src="assets/icons/hand_icon.svg" loading="lazy">
+          <div class="text-xs align-left max-w-3/5 wrap opacity-05">
+            <span class="text-semibold">Your images are never uploaded.</span>
+            Color.io works offline on your device.
+          </div>
+        </footer>
+      </start-screen>
+    </main>
+    <aside class="pos-rel">
+
+      <control-panel-header panel="presets">
+        <img src="assets/icons/presets_icon.svg">
+        <span>Presets</span>
+        <input-selector title="Input color space - IDT"></input-selector>
+        <output-selector title="Output color space - ODT"></output-selector>
+        <control-panel-button type="bypass" title="Hold to disable all effects"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset all effects"></control-panel-button>
+      </control-panel-header>
+
+      <control-panel-header panel="match" open>
+        <img src="assets/icons/match_icon.svg">
+        <span>Color Match<sup>AI</sup></span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Color Match AI</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Match the color, brightness and contrast of a reference image to your current image with Color Match AI in Color.io.
+            Ideal for quickly replicating film looks, creative references, or just to kickstart inspiration for your next color grade.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Import Reference:</strong> Click the folder icon or drag and drop custom reference images.</li>
+            <li><strong>Match Process:</strong> Click the reference thumbnail to initiate matching. Two sliders (Color and Tone) appear for fine-tuning.</li>
+            <li><strong>Color Slider:</strong> Adjusting Color will affect how much of the hue and saturation are matched.</li>
+            <li><strong>Tone Slider:</strong> Adjusting Tone affects how much the brightness and contrast are matched.</li>
+            <li><strong>Color Management:</strong> When you change the Input Color Space after matching, you should re-generate the match to keep it aligned with your image.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> For the highest quality color transfer, use uncompressed PNG reference images.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel>
+        <match-panel extends="control-panel-content"></match-panel>
+      </control-panel>
+
+      <control-panel-header panel="balance">
+        <img src="assets/icons/balance_icon.svg">
+        <span>Balance</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Balance</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>Adjust global exposure, saturation, temperature, and tint with the 2-Axis controls in the Balance Panel.</p>
+          <ul class="flex-col gap-075">
+            <li><strong>Exposure/Saturation Control:</strong> Y-axis adjusts exposure; X-axis adjusts saturation.</li>
+            <li><strong>Tint/Temperature Control:</strong> Y-axis adjusts tint; X-axis adjusts color temperature.</li>
+            <li><strong>Keyboard Modifiers:</strong> Hold Alt/Option to lock a point to the Y-Axis. Hold Shift to lock on X</li>
+            <li><strong>Reset:</strong> Double-click the control point to reset values.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Film Derived Transforms:</strong>Exposure uses non-linear shapers to protect shadows and highlights from clipping. Saturation models analog film density and temperature is a physically based CTO / CTB emulation.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="exposure">
+        <img src="assets/icons/brightness_contrast_icon.svg">
+        <span>Exposure Curve</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Exposure Curve</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            The Exposure Curve allows you to shape brightness across shadows, midtones, and highlights with precise control over luminance ranges.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Curve:</strong> Drag points to brighten (up) or darken (down) specific tonal ranges based on image luminance.</li>
+            <li><strong>Master Slider:</strong> Move the entire curve globally like a regular exposure control.</li>
+            <li><strong>Point Control:</strong> Adjust between 2 and 7 points. Smart interpolation maintains curve shape.</li>
+            <li><strong>Interpolation Modes:</strong> Cycle between Cubic, Bezier, and Linear for different curve smoothness.</li>
+            <li><strong>Keyboard Shortcuts:</strong> Cmd/Ctrl + Drag locks movement to the Y-axis. Double-click a point to reset it.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Shape exposure and dynamic range creatively by brightening shadows without affecting highlights, or flattening midtones for cinematic looks.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="contrast">
+        <img src="assets/icons/luminance_curve_icon.svg">
+        <span>Contrast Curve</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Contrast Curve</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Adjust image contrast distribution across tonal zones with full control over curve shape and interpolation.
+            The contrast curve is filmic by default via built-in brightness-dependent film density modeling: Darkening colors increases their density and brightening exhibits a subtle bleach effect.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Curve Editor:</strong> Drag points to control shadow, midtone, and highlight contrast.</li>
+            <li><strong>Smart Contrast Slider:</strong> Temporarily applies positive (S-curve) or negative contrast (inverted S-curve).</li>
+            <li><strong>Point Count:</strong> Adjust between 2 and 7 control points with smooth redistribution.</li>
+            <li><strong>Interpolation Modes:</strong> Switch between Cubic, Bezier, and Linear curves.</li>
+            <li><strong>Keyboard Shortcuts:</strong> Double-click to reset points. Cmd/Ctrl + Drag locks to Y-axis adjustment.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Use the Smart Contrast slider on the left to create fast, elegant S-curves for filmic contrast adjustments.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="scattering">
+        <img src="assets/icons/scatter_icon.svg">
+        <span>Scattering</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Scattering</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Add physically accurate shadow and highlight tinting based on natural light behavior with the color wheels in the Scattering panel. Ideal for creating film-like, cinematic color contrasts.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Shadow Wheel:</strong> Add ambient color to the shadows of an image. Unlike traditional color wheels, scattering protects naturally occurring shadow colors in an image and tints dark pixels in a way that is consistent with light behaviour in the physical world.</li>
+            <li><strong>Highlight Wheel:</strong> Tints bright areas, simulating direct light. The model is optimized to prevent highlight spill into the darker range of the image which is typical of traditional lift gamma gain controls.</li>
+            <li><strong>Control:</strong> Drag within each wheel to adjust tint hue (direction) and intensity (distance from center).</li>
+            <li><strong>Shortcuts:</strong> Cmd/Ctrl + Drag locks the hue angle for intensity-only adjustments. Shift + Drag locks the intensity for hue-only adjustments.</li>
+            <li><strong>Reset:</strong> Double-click control points to reset them to neutral.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Create natural cinematic looks by pairing cool shadows with warm highlights, mimicking the color separation found in print film stocks.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="refraction">
+        <img src="assets/icons/refract_icon.svg">
+        <span>Refraction</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Refraction</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            AKA Filmic HSL. Refraction wheels are a power-tool for filmic color remapping and compression. Change hue and saturation in shadows and highlights independently for all color vectors using a highly stable, filmic color transform model.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Refraction Wheels:</strong> Adjust hue and film density of six primary color points (Red, Yellow, Green, Cyan, Blue, Magenta) separately for shadows and highlights.</li>
+            <li><strong>Link/Unlink:</strong> Control both luminance regions together or separately for shadows vs highlights.</li>
+            <li><strong>Threshold:</strong> Adjust where the shadow-to-highlight split occurs.</li>
+            <li><strong>Shortcuts:</strong> Cmd/Ctrl + Drag locks the hue angle for density-only adjustments. Shift + Drag locks the density for hue-only adjustments.</li>
+            <li><strong>Reset:</strong> Double-click individual points or use the panel reset button.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Built in Film Emulation:</strong> Color Refraction provides advanced film-like color compression and expansion capabilities, with built-in film density for fine grained color control over the LUT or image.
+            Move points closer to each other to perform hue-compression, or spread them out to increase color contrast.
+          </p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="density">
+        <img src="assets/icons/density_vs_hue_icon.svg">
+        <span>Density Curve</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Density Curve</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Control color richness and saturation hue-by-hue with the Density Curve. Based on analog film density behavior, it deepens colors as saturation increases.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Hue-Based Curve:</strong> Adjust Red, Yellow, Green, Cyan, Blue, and Magenta individually.</li>
+            <li><strong>Master Slider:</strong> Global adjustment of overall color density across all hues.</li>
+            <li><strong>Point Count:</strong> Choose between 2–7 points, smart redistribution maintains curve shape.</li>
+            <li><strong>Interpolation Modes:</strong> Switch between Bezier (default), Linear, or Cubic.</li>
+            <li><strong>Shortcut:</strong> Alt/Option + Drag to lock a point to the current hue.</li>
+            <li><strong>Reset:</strong> Double-click a point to reset or use the panel reset button.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Deepen skies, desaturate skin tones, and selectively enhance colors across the spectrum with painterly, filmic color and without risking oversaturation.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="chroma">
+        <img src="assets/icons/chroma_icon.svg">
+        <span>Chroma Curve</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Chroma Curve</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Adjust saturation based on how colorful pixels already are. Use the Chroma Curve to selectively boost muted tones or protect vibrant highlights.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Chrominance-Based Curve:</strong> Left = Grayscale tones, Right = Highly saturated areas.</li>
+            <li><strong>Master Slider:</strong> Shifts density globally across all chroma levels.</li>
+            <li><strong>Point Count:</strong> Adjust 2–7 points with smart redistribution.</li>
+            <li><strong>Interpolation Modes:</strong> Cycle between Cubic (default), Bezier, or Linear curves.</li>
+            <li><strong>Reset:</strong> Double-click a point to reset it to neutral.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Push the left side of the curve up to enhance muted colors, and pull the right side down to keep vibrant colors in check. This creates organic, balanced saturation.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="radiance">
+        <img src="assets/icons/radiance_curve_icon.svg">
+        <span>Radiance Curve</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Radiance Curve</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Adjust brightness per hue using the Radiance Curve. Ideal for subtle tonal balancing and enhancing color contrast naturally without masking.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Hue-Based Curve:</strong> Red, Yellow, Green, Cyan, Blue, and Magenta hue points.</li>
+            <li><strong>Master Slider:</strong> Global brightness adjustment across all hues.</li>
+            <li><strong>Point Count:</strong> 2–7 points, smart redistribution.</li>
+            <li><strong>Interpolation Modes:</strong> Switch between Bezier (default), Linear, or Cubic.</li>
+            <li><strong>Keyboard Shortcuts:</strong> Cmd/Ctrl + Drag locks movement to Y-axis. Double-click a point to reset it.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Brighten foliage selectively, darken luminous skies, and separate hues tonally for refined, filmic depth.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="saturation">
+        <img src="assets/icons/saturation_icon.svg">
+        <span>Saturation Curve</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Saturation Curve</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Control saturation across different brightness ranges. Boost saturation in shadows or reduce saturation in highlights to avoid color clipping.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Luminance-Based Curve:</strong> Left = Shadows, Right = Highlights.</li>
+            <li><strong>Master Slider:</strong> Move all curve points in unison for global saturation adjustment.</li>
+            <li><strong>Point Count:</strong> Adjust between 2–7 points.</li>
+            <li><strong>Interpolation Modes:</strong> Switch between Bezier (default), Linear, or Cubic curves.</li>
+            <li><strong>Keyboard Shortcuts:</strong> Cmd/Ctrl + Drag locks movement to Y-axis. Double-click to reset points.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Boost color richness in shadows or desaturate highlights to keep them clean and prevent chroma clipping in skies and lights.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="rgb">
+        <img src="assets/icons/sliders_icon.svg">
+        <span>Shadow Highlight</span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Shadows & Highlights</h2>
+          <span class="text-xs text-semibold opacity-05">Included in LUT Exports</span>
+          <p>
+            Adjust brightness and introduce subtle hue shifts separately in the shadows and highlights of your image for fine tonal and color control.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Shadows Section:</strong> Three RGB sliders to brighten, darken, or add color offsets to shadow areas.</li>
+            <li><strong>Highlights Section:</strong> Three RGB sliders to brighten, darken, or add color offsets to highlights.</li>
+            <li><strong>Linked Sliders:</strong> Move together to adjust brightness neutrally. Unlink to introduce color shifts.</li>
+            <li><strong>Quick Rebalance:</strong> Cmd/Ctrl + Click on a slider (when unlinked) averages them back to neutral without resetting brightness.</li>
+            <li><strong>Reset:</strong> Double-click any slider to reset it to zero.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> Introduce cinematic color contrast by cooling shadows slightly and warming highlights subtly for natural tonal separation.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="spotlight">
+        <img src="assets/icons/relight_icon.svg">
+        <span>Spotlight<sup>FX</sup></span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Spotlight</h2>
+          <span class="text-xs text-semibold opacity-05">Render-Only (Not Included in LUTs)</span>
+          <p>
+            Spotlight allows dynamic re-illumination of the image by applying localized exposure and pop, enhancing three-dimensional depth and mood.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Spotlight Amount:</strong> Controls the intensity of the relighting effect.</li>
+            <li><strong>Pop:</strong> Enhances definition in the focus area.</li>
+            <li><strong>Bias:</strong> ← Left only darkens the background. Right → only brightens the subject. Center is balanced.</li>
+            <li><strong>Focus:</strong> Narrows (→) or widens (←) the focus area where relighting is applied to the image.</li>
+            <li><strong>Center:</strong> Move the center of the focus area to highlight different parts of the frame.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>When to use:</strong> Use Spotlight subtly to restore subject prominence, enhance perceived depth in flat images or add a vignette.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="halation">
+        <img src="assets/icons/halation_icon.svg">
+        <span>Halation<sup>FX</sup></span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Halation</h2>
+          <span class="text-xs text-semibold opacity-05">Render-Only (Not Included in LUTs)</span>
+          <p>
+            Simulate the iconic red-orange glow around highlights seen in analog film photography using physically modeled halation emulation.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Halation Amount:</strong> Drag the knob right to increase the glow around bright areas.</li>
+            <li><strong>Light Spill:</strong> Expands halation into midtones and darker regions.</li>
+            <li><strong>Color Shift:</strong> Adjust halation hue between magenta, red, and yellow.</li>
+            <li><strong>Saturation:</strong> Control how colorful the halation glow appears.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Good to know:</strong> For accurate in-app preview, always evaluate halation at 100% zoom level. Zooming out can reduce subtle bright parts of the image that normally emit halation.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="diffusion">
+        <img src="assets/icons/diffusion_icon.svg">
+        <span>Diffusion<sup>FX</sup></span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Diffusion</h2>
+          <span class="text-xs text-semibold opacity-05">Render-Only (Not Included in LUTs)</span>
+          <p>
+            Apply real-time optical diffusion that softens highlights, blooms bright areas, and maintains subject focus — inspired by real-world diffusion filters.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Diffusion Amount:</strong> Main knob controlling the strength of bloom and softness.</li>
+            <li><strong>Fog:</strong> Lifts shadow blacks slightly, enhancing atmospheric depth.</li>
+            <li><strong>Threshold:</strong> Restricts diffusion to only affect highlights, protecting shadow sharpness.</li>
+            <li><strong>Focus:</strong> Protects the center of the image from diffusion for sharper subjects.</li>
+            <li><strong>Focus Point Selector:</strong> Move the protected center focus point anywhere in the frame.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Good to know:</strong> For accurate in-app preview, always evaluate diffusion at 100% zoom level. Zooming out can reduce bright parts of the image which affects the simulated diffusion radius.</p>
+        </div>
+      </control-panel-header>
+
+      <control-panel-header panel="texture">
+        <img src="assets/icons/grain_icon.svg">
+        <span>Texture<sup>FX</sup></span>
+        <control-panel-button type="help" title="Learn More"></control-panel-button>
+        <control-panel-button type="bypass" title="Hold to disable"></control-panel-button>
+        <control-panel-button type="reset" title="Click to reset"></control-panel-button>
+        <div class="panel-help" hidden>
+          <h2>Texture</h2>
+          <span class="text-xs text-semibold opacity-05">Render-Only (Not Included in LUTs)</span>
+          <p>
+            Re-texture every pixel of digital images with volumetric film grain and localized micro-contrast. Simulate anything from fine-grained 35mm film to gritty ISO 800 stocks.
+          </p>
+          <ul class="flex-col gap-075">
+            <li><strong>Film Grain Amount:</strong> Controls the visibility and strength of the film grain simulation.</li>
+            <li><strong>Grain Chroma:</strong> Adjusts how colorful or monochromatic the grain appears.</li>
+            <li><strong>Film Acutance:</strong> Enhances filmic blacks around high density areas for realistic, localized film contrast emulation.</li>
+            <li><strong>Film Resolution:</strong> Perceptual, contrast-adaptive image sharpening (or softening). Influences grain roughness.</li>
+          </ul>
+          <p class="pd-100 rounded-200 bg-higher-000 text-darker"><strong>Pro Tip:</strong> For an authentic analog film scan look, use medium grain, slightly boosted accutance, and slightly soft film resolution settings.</p>
+        </div>
+      </control-panel-header>
+
+    </aside>
+    <overlay-view></overlay-view>
+  </color-io>
+  <script src="js/package.min.js"></script>
+  <!-- Written and directed by Monokee for Color.io -->
+  <!-- Copyright (C) 2023-2025 Jonathan M. Ochmann. All rights reserved. -->
+  <!-- Any modification, reverse engineering or distribution of the code embedded on this website is strictly prohibited. -->
+</body>
+</html>
