@@ -48,4 +48,16 @@
 
   // Call this from anywhere in the app to sign the user out
   window.authSignOut = () => client.auth.signOut();
+
+  // Remove the Color.io about dialog when it appears in the DOM
+  const brandingObserver = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (node.nodeType === 1 && node.textContent.includes('Jonathan Ochmann')) {
+          node.remove();
+        }
+      }
+    }
+  });
+  brandingObserver.observe(document.documentElement, { childList: true, subtree: true });
 })();
