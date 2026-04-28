@@ -57,6 +57,7 @@
   <link rel="icon" href="assets/favicon.png">
 
   <link rel="prefetch" href="js/package.min.js">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
   <title>Color.io App – RAW Photo Editor & AI Color Grading</title>
   <meta name="description" content="AI‑powered online RAW photo editor & color grading app for photographers and filmmakers. Create film‑emulation 3D LUTs with advanced analog curves, halation & batch exports.">
@@ -105,6 +106,92 @@
       height: 100%;
       overscroll-behavior: none;
     }
+
+    /* ── Auth gate ── */
+    #auth-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(29, 29, 35);
+      transition: opacity 0.35s ease;
+    }
+    #auth-gate.auth-fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #auth-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      max-width: 360px;
+      padding: 40px 32px;
+      background: rgb(38, 38, 46);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    #auth-logo {
+      height: 32px;
+      opacity: 0.9;
+    }
+    #auth-card h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgb(226, 226, 233);
+      letter-spacing: -0.01em;
+    }
+    #auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+    #auth-form input {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgb(29, 29, 35);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: rgb(226, 226, 233);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    #auth-form input:focus {
+      border-color: rgba(255,255,255,0.3);
+    }
+    #auth-form input::placeholder {
+      color: rgba(226, 226, 233, 0.35);
+    }
+    #auth-submit {
+      margin-top: 4px;
+      padding: 11px;
+      background: rgb(226, 226, 233);
+      color: rgb(29, 29, 35);
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    #auth-submit:hover { opacity: 0.88; }
+    #auth-submit:disabled { opacity: 0.45; cursor: default; }
+    #auth-error {
+      min-height: 18px;
+      font-size: 13px;
+      color: rgb(255, 100, 100);
+      text-align: center;
+      margin: 0;
+    }
   </style>
 
   <link rel="stylesheet" href="css/package.min.css">
@@ -113,6 +200,20 @@
 
 <body>
   <noscript>Javascript is required to use this application</noscript>
+
+  <div id="auth-gate">
+    <div id="auth-card">
+      <img id="auth-logo" src="assets/cio_logo.svg" alt="Color.io">
+      <h1>Sign In</h1>
+      <form id="auth-form" autocomplete="on">
+        <input id="auth-email" type="email" placeholder="Email" required autocomplete="email">
+        <input id="auth-password" type="password" placeholder="Password" required autocomplete="current-password">
+        <p id="auth-error"></p>
+        <button id="auth-submit" type="submit">Sign In</button>
+      </form>
+    </div>
+  </div>
+
   <color-io>
     <top-bar class="flex-row pd-x-050 pd-y-025 y-center gap-050"></top-bar>
     <main class="pos-rel flex-row center">
@@ -503,6 +604,7 @@
     </aside>
     <overlay-view></overlay-view>
   </color-io>
+  <script src="js/auth.js"></script>
   <script src="js/package.min.js"></script>
   <!-- Written and directed by Monokee for Color.io -->
   <!-- Copyright (C) 2023-2025 Jonathan M. Ochmann. All rights reserved. -->
