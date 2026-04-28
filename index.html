@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Color.io | App">
-  <meta name="mobile-web-app-title" content="Color.io | App">
+  <meta name="apple-mobile-web-app-title" content="Layercade.colors">
+  <meta name="mobile-web-app-title" content="Layercade.colors">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#1e1e21"/>
 
@@ -59,12 +59,12 @@
   <link rel="prefetch" href="js/package.min.js">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
-  <title>Color.io App – RAW Photo Editor & AI Color Grading</title>
+  <title>Layercade.colors – RAW Photo Editor & AI Color Grading</title>
   <meta name="description" content="AI‑powered online RAW photo editor & color grading app for photographers and filmmakers. Create film‑emulation 3D LUTs with advanced analog curves, halation & batch exports.">
-  <meta name="keywords" content="ai color grading, ai color matching, raw photo editor, online raw editor, web app, 3d lut creator, lut generator, film emulation luts, color grading app, color correction software, photo editor, raw editing, color.io">
+  <meta name="keywords" content="ai color grading, ai color matching, raw photo editor, online raw editor, web app, 3d lut creator, lut generator, film emulation luts, color grading app, color correction software, photo editor, raw editing, layercade">
 
-  <meta property="og:title" content="Color.io App">
-  <meta property="og:site_name" content="Color.io App">
+  <meta property="og:title" content="Layercade.colors">
+  <meta property="og:site_name" content="Layercade.colors">
   <meta property="og:description" content="AI‑powered online RAW photo editor & color grading app for photographers and filmmakers. Create film‑emulation 3D LUTs with advanced analog curves, halation & batch exports.">
   <meta property="og:image" content="assets/opengraph_colorio.jpg">
   <meta property="og:image:width" content="1250">
@@ -86,10 +86,11 @@
         'Helvetica Neue', sans-serif;
       color: rgb(226, 226, 233); /* --theme-text-100 */
       background-color: rgb(29, 29, 35); /* --theme-surface-050 :: match top-bar and bottom-bar bg */
-      background-image: url(assets/cio_logo.svg);
+      background-image: url(assets/layercade_logo.png);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: min(90%, 100px);
+      background-size: min(90%, 120px);
+      filter: invert(1);
       user-select: none;
       touch-action: none;
       overscroll-behavior-x: none;
@@ -135,15 +136,16 @@
       border: 1px solid rgba(255,255,255,0.06);
     }
     #auth-logo {
-      height: 32px;
-      opacity: 0.9;
+      height: 48px;
+      filter: invert(1);
+      opacity: 0.92;
     }
     #auth-card h1 {
       margin: 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: rgb(226, 226, 233);
-      letter-spacing: -0.01em;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(226, 226, 233, 0.5);
+      letter-spacing: 0.01em;
     }
     #auth-form {
       display: flex;
@@ -203,8 +205,8 @@
 
   <div id="auth-gate">
     <div id="auth-card">
-      <img id="auth-logo" src="assets/cio_logo.svg" alt="Color.io">
-      <h1>Sign In</h1>
+      <img id="auth-logo" src="assets/layercade_logo.png" alt="Layercade.colors">
+      <h1>Sign in to continue</h1>
       <form id="auth-form" autocomplete="on">
         <input id="auth-email" type="email" placeholder="Email" required autocomplete="email">
         <input id="auth-password" type="password" placeholder="Password" required autocomplete="current-password">
@@ -220,7 +222,7 @@
       <viewport-overlay class="pos-abs w-full flex-row x-between gap-050 pd-050" style="bottom:0"></viewport-overlay>
       <start-screen class="pos-rel flex-col x-center w-475 max-w-5/6 max-h-5/6 overflow-hidden">
         <header class="w-full flex-row y-center x-between gap-050 pd-y-150 pd-x-175">
-          <img src="assets/cio_logo.svg" class="h-100" loading="lazy">
+          <img src="assets/layercade_logo.png" class="h-100" loading="lazy" style="filter:invert(1)">
           <span class="text-xs opacity-05">Version 3.3.3</span>
         </header>
         <section class="pos-rel flex-col center">
@@ -236,7 +238,7 @@
           <img class="w-150 mg-l-100 square opacity-05" src="assets/icons/hand_icon.svg" loading="lazy">
           <div class="text-xs align-left max-w-3/5 wrap opacity-05">
             <span class="text-semibold">Your images are never uploaded.</span>
-            Color.io works offline on your device.
+            Layercade.colors works offline on your device.
           </div>
         </footer>
       </start-screen>

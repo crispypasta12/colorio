@@ -1,8 +1,8 @@
 {
-  "name": "Color.io",
-  "short_name": "Color.io",
-  "id": "app.color.io",
-  "description": "Online raw photo editor and AI color grading tool. Create deeper and richer colors with an analog color grading engine and create 3D LUTs for cinema and photography workflows.",
+  "name": "Layercade.colors",
+  "short_name": "Layercade",
+  "id": "colors.layercade",
+  "description": "AI-powered online RAW photo editor and color grading tool by Layercade. Create deeper and richer colors with an analog color grading engine and create 3D LUTs for cinema and photography workflows.",
   "start_url": "/index.html?utm_campaign=pwa&utm_source=standalone&el=pwa",
   "scope": "/",
   "display": "standalone",
